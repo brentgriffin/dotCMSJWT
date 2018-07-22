@@ -67,7 +67,7 @@ func getSecret(filename string) (string, error) {
 	scanner := bufio.NewScanner(file)
 	for scanner.Scan() {
 		line := strings.TrimSpace(scanner.Text())
-		if len(line) > 100 {
+		if len(line) > 1 {
 			secret = line
 			break
 		}
